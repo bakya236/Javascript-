@@ -23,14 +23,15 @@
 /////////////////////////
 // let InputEmail = document.querySelector("#InputEmail");
 
-function signup(e) {
+function signup(e){
     e.preventDefault();
+    
     // console.log("working"); //to check if this function working
 
 
     let InputEmail = document.querySelector("#InputEmail").value;
 
-    let InputPassword = docum0=ent.querySelector("#InputPassword").value;
+    let InputPassword = document.querySelector("#InputPassword").value;
 
     let user = [{
         email: InputEmail,
