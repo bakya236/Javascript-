@@ -7,16 +7,16 @@ const loginDetails = document.querySelector(".logindetails")
 let inputEmail = document.querySelector("#inputEmail");
 let inputPassword = document.querySelector("#inputPassword");
 
-var users = [];
+let users = [];
 //localStorage.getItem(JSON.parse("users")) ||
 function adduser(email, password) {
     //  console.log("email:" + email);
-    users.push({
-        email: email,
-        password: password
-    });
+        // users.push({
+        //     email: email,
+        //     password: password
+        // });
 
-    localStorage.setItem("users", JSON.stringify(users));
+    //localStorage.setItem("users", JSON.stringify(users));
 
     return ({ email, password });
 
@@ -25,7 +25,7 @@ function adduser(email, password) {
 }
 
 //const createLoginDetails = ({ email, password }) =>
-function createLoginDetails({ email, password }) {
+function createLoginDetails({email, password}) {
     const div_logindetails = document.createElement("div");
     div_logindetails.setAttribute("class", "container");
     const h2_email = document.createElement("h2");
@@ -38,7 +38,9 @@ function createLoginDetails({ email, password }) {
     loginDetails.appendChild(div_logindetails);
 }
 
-//users.forEach(createLoginDetails);
+users.forEach(createLoginDetails);
+
+
 function signUp(event) {
     //const signup = (event) => {
 
